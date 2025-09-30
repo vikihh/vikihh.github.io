@@ -1,34 +1,30 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
-import Box from './Box'
+import Box from './components/Box.jsx'
+import Social from './components/Social.jsx'
+import Title from './components/Title.jsx'
+import Text from './components/Text.jsx'
 
 function App() {
 
   return (
     <div className='vertical-container'>
       <div className='horizontal-container'>
-        <Box content={"Viktoriya Hristova"}/>
-        <Box content={""} isButton={true}/>
-        <Box content={""} isButton={true}/>
+        <Title/>
+        <Social logo={'github'}/>
+        <Social logo={'linkedin'}/>
       </div>
       <div className='horizontal-container'>
-        <Box content={"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas nec nisi turpis. In et sapien ut metus mattis mattis."}/>
-        <Box content={"Photo"}/>
-        <Box content={"Box"}/>
+        <Text content=""/>
+        <Text content=""/>
+        <Text content=""/>
       </div>
       <div className='horizontal-container'>
-        <Box content={"Box"}/>
-        <Box content={"Box"}/>
+        <Text content=""/>
       </div>
       <div className='horizontal-container'>
-        <Box content={
-          <div>
-
-            
-          </div>
-        }/>
+        <Text content=""/>
+        <Text content=""/>
       </div>
     </div>
   )
