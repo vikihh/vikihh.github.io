@@ -2,7 +2,7 @@
   justify-content: center;
   align-items: center;
   display: flex;
-  color: #27025fd6;
+  color: #1a0539d6;
 }
 
 .styled {
@@ -25,12 +25,23 @@
   box-shadow: inset -12px -4px 0px -10px rgba(255, 255, 255, 0.5),
               inset 0px -9px 0px -8px rgba(255, 255, 255, 0.5);
   filter: blur(1px) drop-shadow(10px 4px 6px black) brightness(150%);
+  z-index: -1;
 }
 
 .title {
-    padding: 0.5em;
+    padding: 0.3em;
     flex-grow: 1;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 50px;
+  font-weight: 600;
+  background: linear-gradient(145deg, #120210, #16025c);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: rgba(13, 6, 64, 0.6);
+  text-shadow:
+    3px 3px 6px rgba(0,0,0,0.6),
+    -2px -2px 5px rgba(255,255,255,0.7);
 }
+
 
 .stretched {
   padding: 4em;
