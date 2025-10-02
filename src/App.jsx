@@ -4,6 +4,10 @@ import Box from './components/Box.jsx'
 import Social from './components/Social.jsx'
 import Title from './components/Title.jsx'
 import Text from './components/Text.jsx'
+import Picture from './components/Picture.jsx'
+import profile_photo from "./assets/profile_photo.jpg"
+import radcam from "./assets/radcliffe_camera.jpg"
+import softwire from "./assets/softwire_logo.jpg"
 
 function App() {
 
@@ -16,15 +20,15 @@ function App() {
       </div>
       <div className='horizontal-container'>
         <Text content=""/>
-        <Text content=""/>
+        <Picture photo={profile_photo}/>
+      </div>
+      <div className='horizontal-container'>
+        <Picture photo={radcam}/>
         <Text content=""/>
       </div>
       <div className='horizontal-container'>
         <Text content=""/>
-      </div>
-      <div className='horizontal-container'>
-        <Text content=""/>
-        <Text content=""/>
+        <Picture photo={softwire}/>
       </div>
     </div>
   )
