@@ -1,5 +1,5 @@
-import GitHubLogo from "../assets/github.svg"
-import LinkedInLogo from "../assets/linkedin.svg"
+import GitHubLogo from "../assets/logos/github.svg"
+import LinkedInLogo from "../assets/logos/linkedin.svg"
 import Box from "./Box.jsx"
 
 function Social({ logo = 'github' }) {

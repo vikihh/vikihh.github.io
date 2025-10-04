@@ -1,13 +1,13 @@
 import Box from "./Box.jsx"
 import '../App.css'
-import cpp from '../assets/C++.png'
-import kotlin from '../assets/Kotlin.png'
-import react from '../assets/React.png'
-import sql from '../assets/SQL.png'
-import swift from '../assets/Swift.png'
-import js from '../assets/JavaScript.png'
-import ts from '../assets/Typescript.png'
-import py from '../assets/Python.png'
+import cpp from '../assets/skills/C++.png'
+import kotlin from '../assets/skills/Kotlin.png'
+import react from '../assets/skills/React.png'
+import sql from '../assets/skills/SQL.png'
+import swift from '../assets/skills/Swift.png'
+import js from '../assets/skills/JavaScript.png'
+import ts from '../assets/skills/Typescript.png'
+import py from '../assets/skills/Python.png'
 
 const icons = [
     cpp,
