@@ -22,19 +22,19 @@ function App() {
         </div>
       </div>
       <div className='horizontal-container'>
-        <Text content="" />
         <Picture photo={profile_photo} />
+        <Text content="" />
       </div>
       <div className='horizontal-container'>
         <Skills />
       </div>
       <div className='horizontal-container'>
-        <Picture photo={radcam} />
         <Text content="" />
+        <Picture photo={radcam} />
       </div>
       <div className='horizontal-container'>
-        <Text content="" />
         <Picture photo={softwire} />
+        <Text content="" />
       </div>
     </div>
   )
