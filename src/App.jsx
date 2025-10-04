@@ -5,18 +5,22 @@ import Title from './components/Title.jsx'
 import Text from './components/Text.jsx'
 import Picture from './components/Picture.jsx'
 import Skills from './components/Skills.jsx'
+import Theme from "./components/Theme.jsx"
 import profile_photo from "./assets/profile_photo.jpg"
 import radcam from "./assets/radcliffe_camera.jpg"
 import softwire from "./assets/softwire_logo.jpg"
 
 function App() {
-
+  const [dark, setDark] = useState(0)
   return (
     <div className='vertical-container'>
       <div className='horizontal-container'>
         <Title/>
-        <Social logo={'github'}/>
-        <Social logo={'linkedin'}/>
+        <Theme/>
+        <div className='vertical-container'>
+          <Social logo={'github'}/>
+          <Social logo={'linkedin'}/>
+        </div>
       </div>
       <div className='horizontal-container'>
         <Text content=""/>

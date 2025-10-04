@@ -29,7 +29,6 @@
 }
 
 .title {
-  padding: 0.3em;
   flex-grow: 1;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 50px;
@@ -91,7 +90,7 @@
 }
 
 .button {
-  padding: 0.5em;
+  padding: 8px;
   flex-shrink: 1;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
@@ -99,4 +98,34 @@
 .button:hover {
   transform: scale(1.05);
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.spacer {
+  flex-grow: 1;
+}
+
+.toggle {
+  width: 66px;
+  position: relative;
+}
+
+.toggle-vertical {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.toggle-box {
+  position: absolute;
+  padding: 33px;
+  transition: top 0.3s;
+}
+
+.toggle-box.light {
+  top: 0px;
+}
+
+.toggle-box.dark {
+  top: 87px;
 }
