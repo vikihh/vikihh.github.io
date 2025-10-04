@@ -129,5 +129,5 @@
 }
 
 .toggle-box.dark {
-    bottom: 0px;
+    top: calc(100% - 66px);
 }
