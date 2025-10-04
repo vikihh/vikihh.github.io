@@ -11,31 +11,30 @@ import radcam from "./assets/radcliffe_camera.jpg"
 import softwire from "./assets/softwire_logo.jpg"
 
 function App() {
-  const [dark, setDark] = useState(0)
   return (
     <div className='vertical-container'>
       <div className='horizontal-container'>
-        <Title/>
-        <Theme/>
+        <Title />
+        <Theme />
         <div className='vertical-container'>
-          <Social logo={'github'}/>
-          <Social logo={'linkedin'}/>
+          <Social logo={'github'} />
+          <Social logo={'linkedin'} />
         </div>
       </div>
       <div className='horizontal-container'>
-        <Text content=""/>
-        <Picture photo={profile_photo}/>
+        <Text content="" />
+        <Picture photo={profile_photo} />
       </div>
       <div className='horizontal-container'>
-        <Skills/>
+        <Skills />
       </div>
       <div className='horizontal-container'>
-        <Picture photo={radcam}/>
-        <Text content=""/>
+        <Picture photo={radcam} />
+        <Text content="" />
       </div>
       <div className='horizontal-container'>
-        <Text content=""/>
-        <Picture photo={softwire}/>
+        <Text content="" />
+        <Picture photo={softwire} />
       </div>
     </div>
   )

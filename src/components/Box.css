@@ -1,63 +1,63 @@
 .box {
-  justify-content: center;
-  align-items: center;
-  display: flex;
-  color: #1a0539d6;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    color: #1a0539d6;
 }
 
 .styled {
-  backdrop-filter: blur(2px) saturate(110%);
-  border: 1px solid rgba(255, 255, 255, 0.6);
-  border-radius: 1rem;
-  box-shadow: 0 8px 16px rgba(8, 13, 91, 0.2), 
+    backdrop-filter: blur(2px) saturate(110%);
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    border-radius: 1rem;
+    box-shadow: 0 8px 16px rgba(8, 13, 91, 0.2),
         inset 0 8px 16px rgba(232, 230, 237, 0.3);
 }
 
 .styled::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(255, 255, 255, 0.133);
-  border-radius: 1rem;
-  box-shadow: inset -12px -4px 0px -10px rgba(255, 255, 255, 0.5),
-              inset 0px -9px 0px -8px rgba(255, 255, 255, 0.5);
-  filter: blur(1px) drop-shadow(10px 4px 6px black) brightness(150%);
-  z-index: -1;
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.133);
+    border-radius: 1rem;
+    box-shadow: inset -12px -4px 0px -10px rgba(255, 255, 255, 0.5),
+        inset 0px -9px 0px -8px rgba(255, 255, 255, 0.5);
+    filter: blur(1px) drop-shadow(10px 4px 6px black) brightness(150%);
+    z-index: -1;
 }
 
 .title {
-  flex-grow: 1;
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 50px;
-  font-weight: 600;
-  background: linear-gradient(145deg, #120210, #16025c);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: rgba(13, 6, 64, 0.6);
-  text-shadow:
-    3px 3px 6px rgba(0,0,0,0.6),
-    -2px -2px 5px rgba(255,255,255,0.7);
+    flex-grow: 1;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 50px;
+    font-weight: 600;
+    background: linear-gradient(145deg, #120210, #16025c);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: rgba(13, 6, 64, 0.6);
+    text-shadow:
+        3px 3px 6px rgba(0, 0, 0, 0.6),
+        -2px -2px 5px rgba(255, 255, 255, 0.7);
 }
 
 .picture {
-  flex-shrink: 1;
-  min-width: 150px;
-  max-width: 190px;
+    flex-shrink: 1;
+    min-width: 150px;
+    max-width: 190px;
 }
 
 .picture img {
-  width: 100%;
-  height: 100%;
-  object-fit:fill;
-  display: block;
-  clip-path: inset(0 round 1rem);
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+    display: block;
+    clip-path: inset(0 round 1rem);
 }
 
 .stretched {
-  padding: 4em;
-  flex-grow: 1;
+    padding: 4em;
+    flex-grow: 1;
 }
 
 .skills {
@@ -67,65 +67,66 @@
 }
 
 .carousel-track {
-  animation: scroll 20s linear infinite;
+    animation: scroll 20s linear infinite;
 }
 
 .carousel-item {
-  flex: 0 0 auto;
-  height: 60px;
+    flex: 0 0 auto;
+    height: 60px;
 }
 
 .carousel-item img {
-  width: 100%;
-  height: 100%;
+    width: 100%;
+    height: 100%;
 }
 
 @keyframes scroll {
-  from {
-    transform: translateX(0);
-  }
-  to {
-    transform: translateX(-50%);
-  }
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-50%);
+    }
 }
 
 .button {
-  padding: 8px;
-  flex-shrink: 1;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+    padding: 8px;
+    flex-shrink: 1;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .button:hover {
-  transform: scale(1.05);
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
 .spacer {
-  flex-grow: 1;
+    flex-grow: 1;
 }
 
 .toggle {
-  width: 66px;
-  position: relative;
+    width: 66px;
+    position: relative;
 }
 
 .toggle-vertical {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 .toggle-box {
-  position: absolute;
-  padding: 33px;
-  transition: top 0.3s;
+    position: absolute;
+    padding: 33px;
+    transition: top 0.3s;
 }
 
 .toggle-box.light {
-  top: 0px;
+    top: 0px;
 }
 
 .toggle-box.dark {
-  top: 87px;
+    top: 87px;
 }

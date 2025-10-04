@@ -8,11 +8,10 @@
 
 .vertical-container {
   display: flex;
-  flex-direction: column; 
+  flex-direction: column;
   gap: 20px;
   margin: 0 auto;
 }
-
 
 .horizontal-container {
   display: flex;

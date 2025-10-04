@@ -21,21 +21,21 @@ const icons = [
 ]
 
 function Skills() {
-  return (
-    <Box 
-        content = {
-            <div className="horizontal-container carousel-track">
-            {
-                icons.concat(icons).map((src, i) => (
-                    <div className="carousel-item" key={i}>
-                    <img src={src} alt={`${src}`} />
-                </div>))
+    return (
+        <Box
+            content={
+                <div className="horizontal-container carousel-track">
+                    {
+                        icons.concat(icons).map((src, i) => (
+                            <div className="carousel-item" key={i}>
+                                <img src={src} alt={`${src}`} />
+                            </div>))
+                    }
+                </div>
             }
-            </div>
-        }
-        className="skills"
-    />
-  );
+            className="skills"
+        />
+    );
 }
 
 export default Skills
