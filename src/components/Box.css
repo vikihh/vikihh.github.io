@@ -2,7 +2,6 @@
     justify-content: center;
     align-items: center;
     display: flex;
-    color: #1a0539d6;
 }
 
 .styled {
@@ -131,9 +130,4 @@
 
 .toggle-box.dark {
     top: calc(100% - 66px);
-}
-
-.highlight {
-    color: #2a0769;
-    font-weight: 600;
 }
