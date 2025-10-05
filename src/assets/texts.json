@@ -1,0 +1,25 @@
+{
+  "intro": [
+    { "text": "Hi! I am a recent Computer Science graduate with strong foundation in "},
+    { "text": "algorithms", "highlight": true},
+    { "text": ", "},
+    { "text": "data structures", "highlight": true},
+    { "text": " and "},
+    { "text": "object-oriented programming", "highlight": true},
+    { "text": ". I am interested in "},
+    { "text": "web", "highlight": true},
+    { "text": " and "},
+    { "text": "app development", "highlight": true},
+    { "text": ", and I also find "},
+    { "text": "data visualization and analysis", "highlight": true},
+    { "text": " really exciting."} 
+  ],
+  "education": [
+    { "text": "I did my bachelors in "},
+    { "text": "Pembroke College, University of Oxford", "highlight": true},
+    { "text": " from 2022 to 2025."}
+  ],
+  "internship": [
+    { "text": "The summer of 2025 I was interning at Softwire."}
+  ]
+}

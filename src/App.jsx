@@ -9,6 +9,7 @@ import Theme from "./components/Theme.jsx"
 import profile_photo from "./assets/photos/profile_photo.jpg"
 import radcam from "./assets/photos/radcliffe_camera.jpg"
 import softwire from "./assets/photos/softwire_logo.jpg"
+import texts from "./assets/texts.json"
 
 function App() {
   return (
@@ -23,18 +24,18 @@ function App() {
       </div>
       <div className='horizontal-container'>
         <Picture photo={profile_photo} />
-        <Text content="" />
+        <Text content={'intro'} />
       </div>
       <div className='horizontal-container'>
         <Skills />
       </div>
       <div className='horizontal-container'>
-        <Text content="" />
+        <Text content={'education'} />
         <Picture photo={radcam} />
       </div>
       <div className='horizontal-container'>
         <Picture photo={softwire} />
-        <Text content="" />
+        <Text content={'internship'} />
       </div>
     </div>
   )
