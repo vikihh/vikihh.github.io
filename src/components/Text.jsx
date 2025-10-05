@@ -1,5 +1,4 @@
 import Box from "./Box.jsx"
-import "../App.css"
 import texts from "../assets/texts.json"
 
 const sections = {

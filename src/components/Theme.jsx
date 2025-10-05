@@ -1,8 +1,7 @@
 import SunIcon from "../assets/icons/sun.png"
 import MoonIcon from "../assets/icons/moon.png"
 import Box from "./Box.jsx"
-import { useState, useEffect } from "react";
-import "../App.css"
+import { useState, useEffect } from "react"
 
 function Theme() {
 

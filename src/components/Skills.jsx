@@ -1,5 +1,4 @@
 import Box from "./Box.jsx"
-import '../App.css'
 import cpp from '../assets/skills/C++.png'
 import kotlin from '../assets/skills/Kotlin.png'
 import react from '../assets/skills/React.png'

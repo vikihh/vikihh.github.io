@@ -30,17 +30,17 @@
 }
 
 .title {
-    flex-grow: 1;
-    height: 250px;
-    overflow: visible;
-    margin-bottom: 50px;
+  flex-grow: 1;
+  height: 250px;
+  overflow: visible;
+  margin-bottom: 50px;
 }
 
 .title img {
-    margin: 10px;
-    width: 80%;
-    height: auto;
-    object-fit: cover;
+  margin: 10px;
+  width: 80%;
+  height: auto;
+  object-fit: cover;
 }
 
 .page {

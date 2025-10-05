@@ -1,4 +1,3 @@
-import { useState } from 'react'
 import './App.css'
 import Social from './components/Social.jsx'
 import Title from './components/Title.jsx'
@@ -10,7 +9,6 @@ import profile_photo from "./assets/photos/profile_photo.jpg"
 import radcam from "./assets/photos/radcliffe_camera.jpg"
 import softwire from "./assets/photos/softwire_logo.jpg"
 import background from "./assets/background.svg"
-import texts from "./assets/texts.json"
 
 function App() {
   return (
