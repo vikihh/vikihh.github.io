@@ -24,16 +24,14 @@ function Skills() {
     return (
         <Box
             content={
-                <div className="horizontal-container carousel-track">
-                    {
-                        icons.concat(icons).map((src, i) => (
-                            <div className="carousel-item" key={i}>
-                                <img src={src} alt={`${src}`} />
-                            </div>))
-                    }
+                <div className="carousel-box">
+                    <div className="carousel-track">
+                    {[...icons, ...icons].map((src, i) => (
+                            <img key={i} src={src} alt="" className="carousel-icon" />
+                    ))}
+                    </div>
                 </div>
             }
-            className="skills"
         />
     );
 }

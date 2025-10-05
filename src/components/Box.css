@@ -61,32 +61,31 @@
     flex-grow: 1;
 }
 
-.skills {
-    flex-grow: 1;
-    height: 70px;
+.carousel-box {
+    display: inline-block;
+    max-width: 700px;
+    padding: 10px;
     overflow: hidden;
 }
 
 .carousel-track {
-    animation: scroll 20s linear infinite;
+    display: flex;
+    gap: 20px;
+    width: max-content;
+    animation: scroll-left 15s linear infinite;
 }
 
-.carousel-item {
-    flex: 0 0 auto;
+.carousel-icon {
     height: 60px;
+    width: auto;
+    display: block;  
 }
 
-.carousel-item img {
-    width: 100%;
-    height: 100%;
-}
-
-@keyframes scroll {
-    from {
+@keyframes scroll-left {
+    0% {
         transform: translateX(0);
     }
-
-    to {
+    100% {
         transform: translateX(-50%);
     }
 }
