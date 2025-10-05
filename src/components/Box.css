@@ -29,16 +29,18 @@
 
 .title {
     flex-grow: 1;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 50px;
-    font-weight: 600;
-    background: linear-gradient(145deg, #120210, #16025c);
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: rgba(13, 6, 64, 0.6);
-    text-shadow:
-        3px 3px 6px rgba(0, 0, 0, 0.6),
-        -2px -2px 5px rgba(255, 255, 255, 0.7);
+    height: 150px;
+    overflow: visible;
+}
+
+.title img {
+    position: absolute;
+    top: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50%;
+    height: auto;
+    object-fit: cover;
 }
 
 .picture {

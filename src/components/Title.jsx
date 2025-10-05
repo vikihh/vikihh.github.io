@@ -1,9 +1,10 @@
-import Box from "./Box.jsx"
+import title from "../assets/title.PNG"
 
 function Title() {
     return (
-        <Box content={"Viktoriya Hristova"}
-            className={"title"} />
+        <div className="title">
+            <img src={title} alt="Logo" width="300" height="150" />
+        </div>
     );
 }
 
