@@ -3,9 +3,9 @@ import "../App.css"
 import texts from "../assets/texts.json"
 
 const sections = {
-    "intro": texts.intro,
-    "education": texts.education,
-    "internship": texts.internship
+    'intro': texts.intro,
+    'education': texts.education,
+    'internship': texts.internship
 };
 
 function Text({ content }) {
@@ -21,7 +21,7 @@ function Text({ content }) {
                 )}
             </p>
         }
-            className={"stretched"} />
+        className={"stretched"} />
     );
 }
 
