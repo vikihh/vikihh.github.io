@@ -23,3 +23,8 @@
   align-items: stretch;
   gap: 20px;
 }
+
+.horizontal-small-gap-container {
+  display: flex;
+  gap: 10px;
+}

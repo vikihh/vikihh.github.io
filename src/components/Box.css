@@ -109,13 +109,14 @@
 }
 
 .toggle {
-    width: 66px;
+    height: 66px;
+    flex-grow: 1;
     position: relative;
 }
 
-.toggle-vertical {
+.toggle-horizontal {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
     justify-content: center;
 }
@@ -123,13 +124,13 @@
 .toggle-box {
     position: absolute;
     padding: 33px;
-    transition: top 0.3s;
+    transition: left 0.3s;
 }
 
 .toggle-box.light {
-    top: 0px;
+    left: 0px;
 }
 
 .toggle-box.dark {
-    top: calc(100% - 66px);
+    left: calc(100% - 66px);
 }

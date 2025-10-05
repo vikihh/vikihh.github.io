@@ -14,16 +14,16 @@ import texts from "./assets/texts.json"
 function App() {
   return (
     <div className='vertical-container'>
+      <Title />
       <div className='horizontal-container'>
-        <Title />
-        <Theme />
         <div className='vertical-container'>
-          <Social logo={'github'} />
-          <Social logo={'linkedin'} />
+          <Picture photo={profile_photo} />
+          <div className='horizontal-small-gap-container'>
+            <Theme />
+            <Social logo={'github'} />
+            <Social logo={'linkedin'} />
+          </div>
         </div>
-      </div>
-      <div className='horizontal-container'>
-        <Picture photo={profile_photo} />
         <Text content={'intro'} />
       </div>
       <div className='horizontal-container'>

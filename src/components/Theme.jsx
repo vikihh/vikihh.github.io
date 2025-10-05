@@ -20,11 +20,10 @@ function Theme() {
     return (
         <Box content=
             {
-                <div className="toggle-vertical"
+                <div className="toggle-horizontal"
                     onClick={() => setTheme(theme === 'light' ? "dark" : "light")}>
-                    <div className="vertical-container">
+                    <div className="horizontal-small-gap-container">
                         <img src={SunIcon} alt="Change dark/light theme" width="50" height="50" />
-                        <div className="spacer"></div>
                         <img src={MoonIcon} alt="Change dark/light theme" width="50" height="50" />
                     </div>
                     <div className={`toggle-box styled ${theme}`}></div>
