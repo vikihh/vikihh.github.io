@@ -2,9 +2,9 @@
   display: flex;
   max-width: 800px;
   margin: 0 auto;
-  padding-top: 7rem;
   padding-left: 2rem;
   padding-right: 2rem;
+  padding-top: 0;
   text-align: center;
 }
 
@@ -27,4 +27,18 @@
 .horizontal-small-gap-container {
   display: flex;
   gap: 10px;
+}
+
+.title {
+    flex-grow: 1;
+    height: 250px;
+    overflow: visible;
+    margin-bottom: 50px;
+}
+
+.title img {
+    margin: 10px;
+    width: 80%;
+    height: auto;
+    object-fit: cover;
 }
