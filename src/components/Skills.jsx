@@ -7,6 +7,7 @@ import swift from '../assets/skills/Swift.png'
 import js from '../assets/skills/JavaScript.png'
 import ts from '../assets/skills/Typescript.png'
 import py from '../assets/skills/Python.png'
+import csharp from '../assets/skills/C_sharp.svg';
 
 const icons = [
     cpp,
@@ -16,7 +17,8 @@ const icons = [
     swift,
     js,
     ts,
-    py
+    py,
+    csharp
 ]
 
 function Skills() {
