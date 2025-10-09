@@ -2,16 +2,13 @@
   display: flex;
   max-width: 800px;
   margin: 0 auto;
-  padding-left: 2rem;
-  padding-right: 2rem;
-  padding-top: 0;
   text-align: center;
 }
 
 .vertical-container {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 1rem;
   margin: 0 auto;
 }
 
@@ -21,23 +18,21 @@
   width: 100%;
   justify-content: center;
   align-items: stretch;
-  gap: 20px;
+  gap: 1rem;
 }
 
 .horizontal-small-gap-container {
   display: flex;
-  gap: 10px;
+  gap: 0.5rem;
 }
 
 .title {
   flex-grow: 1;
-  height: 250px;
+  height: 13em;
   overflow: visible;
-  margin-bottom: 50px;
 }
 
 .title img {
-  margin: 10px;
   width: 80%;
   height: auto;
   object-fit: cover;

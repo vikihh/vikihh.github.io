@@ -29,8 +29,7 @@
 
 .picture {
     flex-shrink: 1;
-    min-width: 280px;
-    max-width: 290px;
+    width: 100%;
 }
 
 .picture img {
@@ -48,21 +47,23 @@
 
 .carousel-box {
     display: inline-block;
+    width: 100%;
     max-width: 800px;
-    padding: 10px;
+    padding: 0.5em;
     overflow: hidden;
     border-radius: 1em;
+    box-sizing: border-box;
 }
 
 .carousel-track {
     display: flex;
-    gap: 20px;
+    gap: 1em;
     width: max-content;
     animation: scroll-left 20s linear infinite;
 }
 
 .carousel-icon {
-    height: 60px;
+    height: 2.5em;
     width: auto;
     display: block;
 }
@@ -78,14 +79,14 @@
 }
 
 .button {
-    padding: 8px;
+    padding: 0.4rem;
     flex-shrink: 1;
     transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .button:hover {
     transform: scale(1.05);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 0.4em 0.8em rgba(0, 0, 0, 0.2);
 }
 
 .spacer {
@@ -93,7 +94,7 @@
 }
 
 .toggle {
-    height: 66px;
+    min-height: 2.5em;
     flex-grow: 1;
     position: relative;
 }
@@ -107,7 +108,8 @@
 
 .toggle-box {
     position: absolute;
-    padding: 33px;
+    height: 100%;
+    width: 50%;
     transition: left 0.3s;
 }
 
@@ -116,5 +118,5 @@
 }
 
 .toggle-box.dark {
-    left: calc(100% - 66px);
+    left: 50%;
 }
