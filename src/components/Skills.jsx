@@ -23,16 +23,15 @@ const icons = [
 
 function Skills() {
     return (
-        <Box
+        <Box 
             content={
-                <div className="carousel-box">
                     <div className="carousel-track">
                     {[...icons, ...icons].map((src, i) => (
                             <img key={i} src={src} alt="" className="carousel-icon" />
                     ))}
                     </div>
-                </div>
             }
+            className="carousel-box"
         />
     );
 }
