@@ -21,9 +21,9 @@ function Theme() {
             {
                 <div className="toggle-horizontal"
                     onClick={() => setTheme(theme === 'light' ? "dark" : "light")}>
-                    <div className="horizontal-small-gap-container">
-                        <img src={SunIcon} alt="Change dark/light theme" width="50" height="50" />
-                        <img src={MoonIcon} alt="Change dark/light theme" width="50" height="50" />
+                    <div style={{display: "flex"}}>
+                        <img src={SunIcon} alt="Change dark/light theme"/>
+                        <img src={MoonIcon} alt="Change dark/light theme"/>
                     </div>
                     <div className={`toggle-box styled ${theme}`}></div>
                 </div>

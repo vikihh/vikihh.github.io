@@ -12,7 +12,7 @@ function Social({ logo = 'github' }) {
     <Box content=
       {
         <a href={links[logo]} target="_blank">
-          <img src={(logo == 'linkedin') ? LinkedInLogo : GitHubLogo} alt="Logo" width="50" height="50" />
+          <img src={(logo == 'linkedin') ? LinkedInLogo : GitHubLogo} alt="Logo" />
         </a>
       }
       className="button"
