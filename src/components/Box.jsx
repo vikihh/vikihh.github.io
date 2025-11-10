@@ -1,4 +1,8 @@
-import './Box.css'
+import '../styles/BoxStyles.css'
+import '../styles/Button.css'
+import '../styles/Carousel.css'
+import '../styles/Toggle.css'
+import '../styles/Picture.css'
 
 function Box({ content, className = "" }) {
   return (

@@ -1,0 +1,32 @@
+.carousel-box {
+    display: inline-block;
+    width: 100%;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+    overflow: hidden;
+    border-radius: 1em;
+    box-sizing: border-box;
+}
+
+.carousel-track {
+    display: flex;
+    gap: 1em;
+    width: max-content;
+    animation: scroll-left 20s linear infinite;
+}
+
+.carousel-icon {
+    height: 2.5em;
+    width: auto;
+    display: block;
+}
+
+@keyframes scroll-left {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-50%);
+    }
+}

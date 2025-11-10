@@ -1,0 +1,32 @@
+.toggle {
+    min-height: 2.5em;
+    width: 5em;
+    position: relative;
+}
+
+.toggle-horizontal {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.toggle-horizontal img {
+    width: 50%;
+    height: 100%;
+}
+
+.toggle-box {
+    position: absolute;
+    height: 100%;
+    width: 50%;
+    transition: left 0.3s;
+}
+
+.toggle-box.light {
+    left: 0px;
+}
+
+.toggle-box.dark {
+    left: 50%;
+}
