@@ -9,6 +9,8 @@ import profile_photo from "./assets/photos/profile_photo.jpg"
 import radcam from "./assets/photos/radcliffe_camera.jpg"
 import softwire from "./assets/photos/softwire_logo.jpg"
 import background from "./assets/background.svg"
+import Box from './components/Box.jsx'
+import Projects from './components/Projects.jsx'
 
 function App() {
   return (
@@ -24,6 +26,7 @@ function App() {
               <Social logo={'github'} />
               <Social logo={'linkedin'} />
             </div>
+            <Box content= {<a href="#projects">Projects</a>} className="button"/>
           </div>
           <Text content={'intro'} />
         </div>
@@ -38,6 +41,7 @@ function App() {
           <Picture photo={softwire} />
           <Text content={'internship'} />
         </div>
+        <Projects />
       </div>
     </div>
   )
