@@ -29,6 +29,8 @@
 
 .picture {
     flex-shrink: 1;
+    min-width: 10rem;
+    max-width: 12rem;
     width: 100%;
 }
 
