@@ -31,3 +31,12 @@
     padding: 0.5em;
     flex-grow: 1;
 }
+
+.name-of-project{
+    min-height: 2em;
+    max-height: 2em;
+}
+
+.place-holder {
+    min-height: 10em;
+}

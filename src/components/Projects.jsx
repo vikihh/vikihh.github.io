@@ -2,16 +2,13 @@ import Box from "./Box.jsx"
 
 function Projects() {
   return (
-    <Box content=
-      {
-        <section id="projects">
-          <div>
-            Projects
-          </div>
-        </section>
-      }
-      className="stretched"
-    />
+    <section id="projects">
+      <Box content={
+        <div>
+          Project 1
+        </div>
+      } className="stretched name-of-project" />
+    </section>
   );
 }
 
