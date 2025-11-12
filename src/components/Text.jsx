@@ -1,17 +1,14 @@
 import Box from "./Box.jsx"
 import texts from "../assets/texts.json"
 
-const sections = {
-    'intro': texts.intro,
-    'education': texts.education,
-    'internship': texts.internship
-};
-
-function Text({ content }) {
+function Text({ children }) {
+    const key = typeof children === "string" ? children : null;
+    const content = texts[key] ? texts[key] : children;
+    if (Array.isArray(content)) {
     return (
         <Box content={
             <p>
-                {sections[content].map((segment, i) =>
+                {content.map((segment, i) =>
                     segment.highlight ? (
                         <span key={i} className="highlight">{segment.text}</span>
                     ) : (
@@ -21,7 +18,13 @@ function Text({ content }) {
             </p>
         }
         className={"stretched"} />
-    );
+    );}
+    return (
+        <Box
+            content={content}
+            className="stretched"
+        />
+    )
 }
 
 export default Text

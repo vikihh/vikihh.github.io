@@ -28,18 +28,18 @@ function App() {
             </div>
             <Box content= {<a href="#projects">Projects</a>} className="button"/>
           </div>
-          <Text content={'intro'} />
+          <Text children={'intro'} />
         </div>
         <div className='horizontal-container'>
           <Skills />
         </div>
         <div className='horizontal-container'>
-          <Text content={'education'} />
+          <Text children={'education'} />
           <Picture photo={radcam} />
         </div>
         <div className='horizontal-container'>
           <Picture photo={softwire} />
-          <Text content={'internship'} />
+          <Text children={'internship'} />
         </div>
         <Projects />
       </div>
