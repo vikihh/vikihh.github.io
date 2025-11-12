@@ -24,7 +24,6 @@
 .horizontal-small-gap-container {
   display: flex;
   gap: 0.4em;
-  justify-content: space-between;
 }
 
 .title {
