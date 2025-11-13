@@ -1,6 +1,5 @@
 import GitHubLogo from "../assets/logos/github.svg"
 import LinkedInLogo from "../assets/logos/linkedin.svg"
-import Box from "./Box.jsx"
 
 const links = {
   github: "https://github.com/vikihh/",
@@ -9,14 +8,13 @@ const links = {
 
 function Social({ logo = 'github' }) {
   return (
-    <Box content=
+    <div className={'box'}>
       {
         <a href={links[logo]} target="_blank">
-          <img src={(logo == 'linkedin') ? LinkedInLogo : GitHubLogo} alt="Logo" />
+          <img src={(logo == 'linkedin') ? LinkedInLogo : GitHubLogo} alt="Logo" style={{ width: "2em", height: "2em", display: "flex" }}/>
         </a>
       }
-      className="button"
-    />
+    </div>
   );
 }
 
