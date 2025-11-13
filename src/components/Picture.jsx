@@ -2,10 +2,9 @@ import Box from "./Box.jsx"
 
 function Picture({ photo }) {
   return (
-    <Box
-      content={<img src={photo} alt="Photo" />}
-      className={'picture'}
-    />
+    <div className='box picture'>
+      <img src={photo} alt="Photo" />
+    </div>
   );
 }
 
