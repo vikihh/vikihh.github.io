@@ -15,12 +15,18 @@
     { "text": " really exciting."} 
   ],
   "education": [
-    { "text": "I did my bachelors in "},
-    { "text": "Pembroke College, University of Oxford", "highlight": true},
-    { "text": " from 2022 to 2025."}
+    { "text": "BA in Computer Science - " },
+    { "text": "Oxford", "highlight": true },
+    { "text": "\n\nRelevant modules: Algorithms, Data Visualization, Databases, AI, ML" }
   ],
+
   "internship": [
-    { "text": "The summer of 2025 I was interning at Softwire."}
+    { "text": "Software Developer Intern - " },
+    { "text": "Softwire", "highlight": true },
+    { "text": "\nApp Development Team, Summer 2025" },
+    { "text": "\n\nTechnologies: " },
+    { "text": "Kotlin, Swift, TypeScript", "highlight": true },
+    { "text": "\nBuilt features, fixed bugs, and collaborated in Agile teams." }
   ],
   "projects": [
     "Project 1",
