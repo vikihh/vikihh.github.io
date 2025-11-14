@@ -7,7 +7,7 @@ import Skills from './components/Skills.jsx'
 import Theme from "./components/Theme.jsx"
 import profile_photo from "./assets/photos/profile_photo.jpg"
 import radcam from "./assets/photos/radcliffe_camera.jpg"
-import softwire from "./assets/photos/softwire_logo.jpg"
+import softwire from "./assets/photos/softwire_logo.png"
 import background from "./assets/background.svg"
 import Box from './components/Box.jsx'
 import Projects from './components/Projects.jsx'
