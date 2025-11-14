@@ -4,8 +4,11 @@ import LeftArrow from "../assets/icons/left.png"
 import RightArrow from "../assets/icons/right.png"
 import texts from "../assets/texts.json"
 import { useState } from "react";
+import { useNavigate } from 'react-router-dom';
 
 function Projects() {
+  const navigate = useNavigate();
+
   const cards = texts.projects;
   const [index, setIndex] = useState(0);
   const next = () => setIndex((i) => (i + 1) % cards.length);
@@ -17,7 +20,7 @@ function Projects() {
         <div className="horizontal-small-gap-container">
           <Box content=
             {
-              <div className="arrow" onClick={prev}>
+              <div onClick={prev}>
                 <img src={LeftArrow} alt="Left" style={{ width: "2em", height: "2em", display: "flex" }} />
               </div>
             }
@@ -25,7 +28,7 @@ function Projects() {
           />
           <Box content=
             {
-              <div className="arrow" onClick={next}>
+              <div onClick={next}>
                 <img src={RightArrow} alt="Right" style={{ width: "2em", height: "2em", display: "flex" }} />
               </div>
             }
@@ -33,6 +36,12 @@ function Projects() {
           />
         </div>
         <Text children={cards[index]} />
+        <Box content={
+          <div onClick={() => navigate('/game')}>
+            PLAY
+          </div>}
+          className="button"
+          />
       </div>
     </section>
   );
