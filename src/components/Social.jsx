@@ -8,10 +8,10 @@ const links = {
 
 function Social({ logo = 'github' }) {
   return (
-    <div className={'box'}>
+    <div className={"box social-button"}>
       {
         <a href={links[logo]} target="_blank">
-          <img src={(logo == 'linkedin') ? LinkedInLogo : GitHubLogo} alt="Logo" style={{ width: "2em", height: "2em", display: "flex" }}/>
+          <img src={(logo == 'linkedin') ? LinkedInLogo : GitHubLogo} alt="Logo"/>
         </a>
       }
     </div>
