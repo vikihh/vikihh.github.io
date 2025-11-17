@@ -1,10 +1,8 @@
 import '../App.css'
-import Social from '../components/Social.jsx'
 import Title from '../components/Title.jsx'
 import Text from '../components/Text.jsx'
 import Picture from '../components/Picture.jsx'
 import Skills from '../components/Skills.jsx'
-import Theme from "../components/Theme.jsx"
 import profile_photo from "../assets/photos/profile_photo.jpg"
 import radcam from "../assets/photos/radcliffe_camera.jpg"
 import softwire from "../assets/photos/softwire_logo.png"
