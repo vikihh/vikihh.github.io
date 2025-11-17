@@ -19,9 +19,9 @@ function Theme() {
     return (
         <Box content=
             {
-                <div className="toggle-horizontal"
+                <div className="toggle-vertical"
                     onClick={() => setTheme(theme === 'light' ? "dark" : "light")}>
-                    <div style={{display: "flex"}}>
+                    <div style={{ display: "flex", flexDirection: "column" }}>
                         <img src={SunIcon} alt="Change dark/light theme"/>
                         <img src={MoonIcon} alt="Change dark/light theme"/>
                     </div>

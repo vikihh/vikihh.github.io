@@ -21,11 +21,6 @@ function Home() {
         <div className='horizontal-container'>
           <div className='vertical-container'>
             <Picture photo={profile_photo} />
-            <div className='horizontal-small-gap-container'>
-              <Theme />
-              <Social logo={'github'} />
-              <Social logo={'linkedin'} />
-            </div>
             <Box content= {<a href="#projects">Projects</a>} className="button"/>
           </div>
           <Text children={'intro'} />
