@@ -1,5 +1,5 @@
-import GitHubLogo from "../assets/icons/github_logo.png"
-import LinkedInLogo from "../assets/icons/linkedin.svg"
+import GitHubLogo from "../assets/icons/github.png"
+import LinkedInLogo from "../assets/icons/linkedin.png"
 
 const links = {
   github: "https://github.com/vikihh/",
