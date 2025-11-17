@@ -25,7 +25,7 @@ function Theme() {
                         <img src={SunIcon} alt="Change dark/light theme"/>
                         <img src={MoonIcon} alt="Change dark/light theme"/>
                     </div>
-                    <div className={`toggle-box styled ${theme}`}></div>
+                    <div className={`toggle-box ${theme}`}></div>
                 </div>
             }
             className="toggle" />
