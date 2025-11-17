@@ -37,8 +37,8 @@ function Projects() {
         </div>
         <Text children={cards[index]} />
         <Box content={
-          <div onClick={() => navigate('/game')}>
-            PLAY
+          <div onClick={() => navigate('/game')} style={{ padding: "0.2em"}}>
+            Go to Project
           </div>}
           className="button"
           />
