@@ -32,5 +32,10 @@
     "Description 1",
     "Description 2",
     "Description 3"
+  ],
+  "buttons": [
+    "true",
+    "false",
+    "false"
   ]
 }

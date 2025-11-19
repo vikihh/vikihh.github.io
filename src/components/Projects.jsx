@@ -5,6 +5,21 @@ import { useState } from "react";
 import { useNavigate } from 'react-router-dom';
 import { FaCaretLeft, FaCaretRight } from "react-icons/fa";
 
+function DescriptionAndButton({ text, index }) {
+  if (texts.buttons[index]=='true'){
+  return (
+    <div className="horizontal-container">
+      <Text children={text} />
+      <Box content={
+        <div onClick={() => navigate('/game')} style={{ padding: "0.2em" }}>
+          Go to Project
+        </div>}
+        className="button"
+      />
+    </div>)}
+  return (<Text children={text} />)
+}
+
 function Projects() {
   const navigate = useNavigate();
 
@@ -34,13 +49,7 @@ function Projects() {
             className="button"
           />
         </div>
-        <Text children={cards[index]} />
-        <Box content={
-          <div onClick={() => navigate('/game')} style={{ padding: "0.2em"}}>
-            Go to Project
-          </div>}
-          className="button"
-          />
+        <DescriptionAndButton text = {cards[index]} index = {index}/>
       </div>
     </section>
   );
