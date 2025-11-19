@@ -1,10 +1,9 @@
 import Box from "./Box.jsx"
 import Text from './Text.jsx';
-import LeftArrow from "../assets/icons/left.png"
-import RightArrow from "../assets/icons/right.png"
 import texts from "../assets/texts.json"
 import { useState } from "react";
 import { useNavigate } from 'react-router-dom';
+import { FaCaretLeft, FaCaretRight } from "react-icons/fa";
 
 function Projects() {
   const navigate = useNavigate();
@@ -20,16 +19,16 @@ function Projects() {
         <div className="horizontal-small-gap-container">
           <Box content=
             {
-              <div onClick={prev}>
-                <img src={LeftArrow} alt="Left" style={{ width: "2em", height: "2em", display: "flex" }} />
+              <div onClick={prev} style={{ width: "2em", display: "flex" }}>
+                <FaCaretLeft style={{width:"100%", height:"100%"}}/>
               </div>
             }
             className="button"
           />
           <Box content=
             {
-              <div onClick={next}>
-                <img src={RightArrow} alt="Right" style={{ width: "2em", height: "2em", display: "flex" }} />
+              <div onClick={next} style={{width: "2em", display: "flex" }}>
+                <FaCaretRight style={{width:"100%", height:"100%"}}/>
               </div>
             }
             className="button"

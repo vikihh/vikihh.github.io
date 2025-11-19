@@ -1,5 +1,4 @@
-import SunIcon from "../assets/icons/sun.png"
-import MoonIcon from "../assets/icons/moon.png"
+import { FiMoon, FiSun } from "react-icons/fi";
 import Box from "./Box.jsx"
 import { useState, useEffect } from "react"
 
@@ -21,11 +20,9 @@ function Theme() {
             {
                 <div className="toggle-vertical"
                     onClick={() => setTheme(theme === 'light' ? "dark" : "light")}>
-                    <div style={{ display: "flex", flexDirection: "column" }}>
-                        <img src={SunIcon} alt="Change dark/light theme"/>
-                        <img src={MoonIcon} alt="Change dark/light theme"/>
-                    </div>
-                    <div className={`toggle-box ${theme}`}></div>
+                        <FiMoon style={{width:"100%", height:"25%"}}/>
+                        <FiSun style={{width:"100%", height:"25%"}}/>
+                        <div className={`toggle-box ${theme}`}></div>
                 </div>
             }
             className="toggle" />
