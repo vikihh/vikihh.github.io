@@ -6,17 +6,18 @@ import { useNavigate } from 'react-router-dom';
 import { FaCaretLeft, FaCaretRight } from "react-icons/fa";
 
 function DescriptionAndButton({ text, index }) {
-  if (texts.buttons[index]=='true'){
-  return (
-    <div className="horizontal-container">
-      <Text children={'projects'} index={index} />
-      <Box content={
-        <div onClick={() => navigate('/game')} style={{ padding: "0.2em" }}>
-          Go to Project
-        </div>}
-        className="button"
-      />
-    </div>)}
+  if (texts.buttons[index] == 'true') {
+    return (
+      <div className="horizontal-container">
+        <Text children={'projects'} index={index} />
+        <Box content={
+          <div onClick={() => navigate('/game')} style={{ padding: "0.2em" }}>
+            Go to Project
+          </div>}
+          className="button"
+        />
+      </div>)
+  }
   return (<Text children={text} />)
 }
 
@@ -31,25 +32,28 @@ function Projects() {
   return (
     <section id="projects">
       <div className="horizontal-container">
-        <div className="horizontal-small-gap-container">
-          <Box content=
-            {
-              <div onClick={prev} style={{ width: "2em", display: "flex" }}>
-                <FaCaretLeft style={{width:"100%", height:"100%"}}/>
-              </div>
-            }
-            className="button"
-          />
-          <Box content=
-            {
-              <div onClick={next} style={{width: "2em", display: "flex" }}>
-                <FaCaretRight style={{width:"100%", height:"100%"}}/>
-              </div>
-            }
-            className="button"
-          />
+        <DescriptionAndButton text={cards[index]} index={index} />
+        <div className="vertical-container">
+          <Text children={'tech'} index={index} />
+          <div className="horizontal-small-gap-container">
+            <Box content=
+              {
+                <div onClick={prev} style={{ width: "2em", display: "flex" }}>
+                  <FaCaretLeft style={{ width: "100%", height: "100%" }} />
+                </div>
+              }
+              className="button"
+            />
+            <Box content=
+              {
+                <div onClick={next} style={{ width: "2em", display: "flex" }}>
+                  <FaCaretRight style={{ width: "100%", height: "100%" }} />
+                </div>
+              }
+              className="button"
+            />
+          </div>
         </div>
-        <DescriptionAndButton text = {cards[index]} index = {index}/>
       </div>
     </section>
   );

@@ -37,5 +37,11 @@
   "buttons": [
     "false",
     "false"
+  ],
+  "tech": [
+    [{ "text": "Tech\n", "highlight":true},
+     { "text": "React, JavaScript, CSS"}],
+    [{ "text": "Tech\n", "highlight":true },
+     { "text": "Unity, C#, Git"}]
   ]
 }
