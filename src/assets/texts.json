@@ -40,8 +40,8 @@
   ],
   "tech": [
     [{ "text": "Tech\n", "highlight":true},
-     { "text": "React, JavaScript, CSS"}],
+     { "text": "React\n JavaScript\n CSS"}],
     [{ "text": "Tech\n", "highlight":true },
-     { "text": "Unity, C#, Git"}]
+     { "text": "Unity\n C#\n Git"}]
   ]
 }
