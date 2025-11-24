@@ -9,7 +9,7 @@ function DescriptionAndButton({ text, index }) {
   if (texts.buttons[index]=='true'){
   return (
     <div className="horizontal-container">
-      <Text children={text} />
+      <Text children={'projects'} index={index} />
       <Box content={
         <div onClick={() => navigate('/game')} style={{ padding: "0.2em" }}>
           Go to Project

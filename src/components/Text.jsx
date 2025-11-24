@@ -10,9 +10,13 @@ function renderTextWithHighlights(segment, i) {
     ]);
 }
 
-function Text({ children }) {
+function Text({ children, index }) {
     const key = typeof children === "string" ? children : null;
-    const content = texts[key] ? texts[key] : children;
+
+    var content;
+    if (typeof index=== "undefined") content = texts[key] ? texts[key] : children;
+    else content = texts[key][index] ? texts[key][index] : children;
+
     if (Array.isArray(content)) {
         return (
             <Box content={

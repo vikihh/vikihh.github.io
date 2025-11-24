@@ -29,12 +29,12 @@
     { "text": "\nBuilt features, fixed bugs, and collaborated in Agile teams." }
   ],
   "projects": [
-    "Description 1",
-    "Description 2",
-    "Description 3"
+    [{ "text": "Portfolio\n", "highlight":true},
+     { "text": "I built this portfolio website as a central space to showcase my projects, experience, and technical skills. The goal was to create a clean, minimal, and professional design that reflects my style while ensuring fast performance and easy navigation." }],
+    [{ "text": "3D Data Visualization Project (Unity)\n", "highlight":true },
+     { "text": "This group project involved developing a 3D data visualization application. The goal was to allow analysts to explore financial data in a virtual environment using Meta AR/VR glasses, providing a more immersive and intuitive way to interpret complex datasets."}]
   ],
   "buttons": [
-    "true",
     "false",
     "false"
   ]
