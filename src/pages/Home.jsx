@@ -19,7 +19,9 @@ function Home() {
         <div className='horizontal-container'>
           <div className='vertical-container'>
             <Picture photo={profile_photo} />
-            <Box content= {<a href="#projects">Projects</a>} className="button"/>
+            <a href="#projects">
+              <Box content= {"Projects"} className="button"/>
+            </a>
           </div>
           <Text children={'intro'} />
         </div>
