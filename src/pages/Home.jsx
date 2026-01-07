@@ -37,6 +37,9 @@ function Home() {
           <Text children={'internship'} />
         </div>
         <Projects />
+        <div className='horizontal-container'>
+          <Text children={'achievements'} />
+        </div>
       </div>
     </div>
   )

@@ -44,5 +44,8 @@
      { "text": "React\n JavaScript\n CSS"}],
     [{ "text": "Tech\n", "highlight":true },
      { "text": "Unity\n C#\n Git"}]
+  ],
+  "achievements": [
+    { "text": "Achievements", "highlight":true}
   ]
 }
