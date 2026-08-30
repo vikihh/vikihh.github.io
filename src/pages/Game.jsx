@@ -1,10 +1,10 @@
 import '../game/WordleStyles.css'
-import Wordle from '../game/Wordle.jsx'
-import words from '../game/words.js';
+import Wordle from '../game/Wordle.jsx';
+import {possibleAnswersWords, allowedWords} from '../game/words.js';
 function Game() {
   function chooseRandomWord() {
-    var randomIndex = Math.floor(Math.random() * words.length);
-    return words[randomIndex];
+    var randomIndex = Math.floor(Math.random() * possibleAnswersWords.length);
+    return possibleAnswersWords[randomIndex];
   }
   let randomWord = chooseRandomWord();
   return (

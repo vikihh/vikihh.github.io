@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { useEffect } from 'react';
 import './WordleStyles.css';
-import words from './words.js';
+import {allowedWords, possibleAnswersWords} from './words.js';
 function Square({ value, className = "" }) {
   return (
     <div className={`square ${className}`}>
@@ -58,7 +58,7 @@ function Wordle({ content, className = "" }) {
     else if (!/^[a-zA-Z]+$/.test(word)) {
         return false;
     }
-    if (!words.includes(word.toUpperCase())) {
+    if (!allowedWords.includes(word.toUpperCase())) {
       return false;
     }
     return true;

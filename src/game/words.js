@@ -1,8 +1,16 @@
-import text from "./5-letter-words.txt?raw";
+import allowed from "./wordle-allowed-guesses.txt?raw";
+import answers from "./wordle-answers-alphabetical.txt?raw";
 
-const words = text
+const onlyAllowedWords = allowed
   .split(/\r?\n/)
   .map(word => word.trim().toUpperCase())
   .filter(Boolean);
 
-export default words;
+const possibleAnswersWords = answers
+  .split(/\r?\n/)
+  .map(word => word.trim().toUpperCase())
+  .filter(Boolean);
+
+const allowedWords = [...onlyAllowedWords, ...possibleAnswersWords];
+
+export { allowedWords, possibleAnswersWords };
