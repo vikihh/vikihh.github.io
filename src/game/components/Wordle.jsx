@@ -110,7 +110,7 @@ function Wordle({ content, className = "" }) {
         setTries(tries + 1);
         setInput("");
       } else {
-        shakeRow(tries);
+        if (!gameOver()) shakeRow(tries);
       }
     }
 
