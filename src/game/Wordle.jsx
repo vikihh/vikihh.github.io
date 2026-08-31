@@ -2,39 +2,8 @@ import { useState } from 'react';
 import { useEffect } from 'react';
 import './WordleStyles.css';
 import {allowedWords, possibleAnswersWords} from './words.js';
-function Square({ value, className = "" }) {
-  return (
-    <div className={`square ${className}`}>
-      {value}
-    </div>
-  );
-}
-
-function Row({ values, result, shake }) {
-  function getClassName(value, result) {
-    if (result === 'G') {
-      return 'green';
-    } else if (result === 'Y') {
-      return 'yellow';
-    } else if (result === 'X') {
-      return 'gray';
-    } else {
-      return 'empty';
-    }
-  }
-
-  return (
-    <div className={`row ${shake ? 'shake' : ''}`}>
-      {values.map((value, index) => (
-        <Square
-          key={index}
-          value={value}
-          className={getClassName(value, result[index])}
-        />
-      ))}
-    </div>
-  );
-}
+import Row from "./Row.jsx";
+import Keyboard from './Keyboard.jsx';
 
 function Wordle({ content, className = "" }) {
   const [currentInput, setInput] = useState("");
@@ -95,7 +64,7 @@ function Wordle({ content, className = "" }) {
       : row
   );
   setRows(newRows);
-}
+  }
   function gameOver() {
     if (tries >= 6) {
       return true;
@@ -112,35 +81,38 @@ function Wordle({ content, className = "" }) {
         : row
     ));
   }
-  useEffect(() => {
-    function handleKeyDown(event) {
-      if (event.key === 'Enter') {
-        if (checkValidWord(currentInput) && !gameOver()) {
-          let result = checkWordle(currentInput, tries);
-          setResult(result);
-          addResult(currentInput, result, tries);
-          setTries(tries + 1);
-          setInput("");
-        } else {
-          shakeRow(tries);
-        }
-      }
-      if (event.key === 'Backspace') {
-        setInput(currentInput.slice(0, -1));
-        if (currentInput.length > 0 && !gameOver()) {
-          addResult(currentInput.slice(0, -1), Array(5).fill('E'), tries);
-        }
-      }
-      if (checkValidLetter(event.key) && currentInput.length < 5) {
-        setInput(currentInput => (currentInput + event.key));
-        if (!gameOver()) {
-          addResult(currentInput+event.key, Array(5).fill('E'), tries);
-        }
+  function handleKey(key) {
+    if (key === 'ENTER') {
+      if (checkValidWord(currentInput) && !gameOver()) {
+        let result = checkWordle(currentInput, tries);
+        setResult(result);
+        addResult(currentInput, result, tries);
+        setTries(tries + 1);
+        setInput("");
+      } else {
+        shakeRow(tries);
       }
     }
 
-    window.addEventListener("keydown", handleKeyDown);
+    if (key === 'BACKSPACE') {
+      setInput(currentInput.slice(0, -1));
+      if (currentInput.length > 0 && !gameOver()) {
+        addResult(currentInput.slice(0, -1), Array(5).fill('E'), tries);
+      }
+    }
 
+    if (checkValidLetter(key) && currentInput.length < 5) {
+        setInput(currentInput => (currentInput + key));
+        if (!gameOver()) {
+          addResult(currentInput+key, Array(5).fill('E'), tries);
+        }
+    }
+  }
+  useEffect(() => {
+    function handleKeyDown(event) {
+      handleKey(event.key.toUpperCase());
+    }
+    window.addEventListener("keydown", handleKeyDown);
     return () => {
         window.removeEventListener("keydown", handleKeyDown);
     };
@@ -157,6 +129,7 @@ function Wordle({ content, className = "" }) {
           />
         ))}
       </div>
+      <Keyboard onKey = {handleKey}/>
       <p>{gameOver() ? content : ""}</p>
     </>
   );

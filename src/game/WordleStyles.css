@@ -89,3 +89,55 @@
     border: 2px solid;
     border-color: var(--game-border);
 }
+
+.keyboard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  margin-top: 30px;
+  width: 100%;
+}
+
+.keyboard-row {
+  display: flex;
+  justify-content: center;
+  gap: 6px;
+}
+
+.keyboard button {
+  width: 43px;
+  height: 58px;
+
+  border: none;
+  border-radius: 5px;
+
+  background-color: #d3d6da;
+  color: #111;
+
+  font-size: 14px;
+  font-weight: 700;
+
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 0;
+  user-select: none;
+
+  transition: transform 0.05s, background-color 0.15s;
+}
+
+.keyboard button:hover {
+  background-color: #bbb;
+}
+
+.keyboard button:active {
+  transform: scale(0.92);
+}
+
+.keyboard button.special {
+  width: 65px;
+}
