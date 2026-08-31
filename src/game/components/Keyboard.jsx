@@ -1,5 +1,5 @@
 import keyboardRows from '../assets/keyboard.js';
-import './WordleStyles.css';
+import '../styles/KeyboardStyles.css';
 function Keyboard({onKey, keyResults}) {
   return (
     <div className='keyboard'>

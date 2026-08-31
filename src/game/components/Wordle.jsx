@@ -1,9 +1,9 @@
 import { useState } from 'react';
 import { useEffect } from 'react';
-import './WordleStyles.css';
+import '../styles/GameContentStyles.css';
 import {allowedWords, possibleAnswersWords} from '../assets/words.js';
 import Row from "./Row.jsx";
-import Keyboard from '..assets/keyboard.js';
+import Keyboard from '../components/Keyboard.jsx';
 
 function Wordle({ content, className = "" }) {
   const [currentInput, setInput] = useState("");

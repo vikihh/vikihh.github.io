@@ -1,3 +1,4 @@
+import '../styles/GameContentStyles.css';
 import Square from "./Square.jsx";
 function Row({ values, result, shake }) {
   function getClassName(value, result) {

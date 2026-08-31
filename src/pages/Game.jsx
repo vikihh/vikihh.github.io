@@ -1,6 +1,6 @@
-import '../game/WordleStyles.css'
-import Wordle from '../game/Wordle.jsx';
-import {possibleAnswersWords, allowedWords} from '../game/words.js';
+import '../game/styles/WordleStyles.css'
+import Wordle from '../game/components/Wordle.jsx';
+import {possibleAnswersWords, allowedWords} from '../game/assets/words.js';
 function Game() {
   function chooseRandomWord() {
     var randomIndex = Math.floor(Math.random() * possibleAnswersWords.length);
