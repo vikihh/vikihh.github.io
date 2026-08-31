@@ -47,6 +47,17 @@
     color: #fffafa;
     border: 2px solid #3b3b3b;
 }
+
+[data-theme="dark"] .empty {
+  --game-color: #fbfafd;
+  --game-border: #3b3b3b;
+}
+
+[data-theme="light"] .empty {
+  --game-color: #252526;
+  --game-border: #a0a0a0;
+}
+
 .empty {
     background-color: transparent;
     color: var(--game-color);
