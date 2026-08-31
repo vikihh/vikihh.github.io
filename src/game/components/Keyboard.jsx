@@ -1,4 +1,4 @@
-import keyboardRows from './keyboard.js';
+import keyboardRows from '../assets/keyboard.js';
 import './WordleStyles.css';
 function Keyboard({onKey, keyResults}) {
   return (
