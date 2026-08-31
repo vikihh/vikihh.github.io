@@ -94,28 +94,28 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 8px;
-  margin-top: 30px;
+  gap: 4px;
+  margin-top: 15px;
   width: 100%;
 }
 
 .keyboard-row {
   display: flex;
   justify-content: center;
-  gap: 6px;
+  gap: 4px;
 }
 
 .keyboard button {
-  width: 43px;
-  height: 58px;
+  width: 40px;
+  height: 52px;
 
   border: none;
-  border-radius: 5px;
+  border-radius: 4px;
 
-  background-color: #d3d6da;
+  background-color: #9a9a9a;
   color: #111;
 
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 700;
 
   cursor: pointer;
@@ -140,4 +140,22 @@
 
 .keyboard button.special {
   width: 65px;
+}
+
+.keyboard button.green {
+  background-color: #1b8539;
+  color: #fffafa;
+  border: 2px solid #1b8539;
+}
+
+.keyboard button.yellow {
+  background-color: #997e11;
+  color: #fffafa;
+  border: 2px solid #997e11;
+}
+
+.keyboard button.gray {
+  background-color: #3b3b3b;
+  color: #fffafa;
+  border: 2px solid #3b3b3b;
 }

@@ -1,6 +1,6 @@
 import keyboardRows from './keyboard.js';
 import './WordleStyles.css';
-function Keyboard({onKey}) {
+function Keyboard({onKey, keyResults}) {
   return (
     <div className='keyboard'>
       {keyboardRows.map((row, rowIndex) => (
@@ -8,8 +8,10 @@ function Keyboard({onKey}) {
           {
             row.map(key => 
               <button
-                onClick={() => {onKey(key); console.log("here");}}
-                className={key === 'ENTER' || key === 'BACKSPACE' ? 'special' : ''}>
+              key={key}
+              className={(key==='BACKSPACE' || key==='ENTER') ? 'special' : (keyResults[key] || '')}
+              onClick={() => onKey(key)}
+              >
                 {key === 'BACKSPACE' ? 'BACK' : key}
               </button>
             )

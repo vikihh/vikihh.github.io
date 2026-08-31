@@ -9,6 +9,7 @@ function Wordle({ content, className = "" }) {
   const [currentInput, setInput] = useState("");
   const [result, setResult] = useState(['E', 'E', 'E', 'E', 'E']);
   const [tries, setTries] = useState(0);
+  const [keyResults, setKeyResults] = useState({});
   let numrows = 6;
   const [rows, setRows] = useState(
     Array(numrows).fill(null).map(() => ({
@@ -52,6 +53,24 @@ function Wordle({ content, className = "" }) {
     }
     return result;
   }
+  function updateKeyboard(word, result) {
+    setKeyResults(prev => {
+      const updated = { ...prev };
+      word.toUpperCase().split('').forEach((letter, index) => {
+        const newResult = result[index];
+        if (newResult === 'G') {
+          updated[letter] = 'green';
+        }
+        else if (newResult === 'Y' && updated[letter] !== 'green') {
+          updated[letter] = 'yellow';
+        }
+        else if (newResult === 'X' && !updated[letter]) {
+          updated[letter] = 'gray';
+        }
+      });
+      return updated;
+    });
+}
   function addResult(word, result, tries) {
   word = word.padEnd(5, ' ');
   const newRows = rows.map((row, index) =>
@@ -87,6 +106,7 @@ function Wordle({ content, className = "" }) {
         let result = checkWordle(currentInput, tries);
         setResult(result);
         addResult(currentInput, result, tries);
+        updateKeyboard(currentInput, result);
         setTries(tries + 1);
         setInput("");
       } else {
@@ -129,7 +149,7 @@ function Wordle({ content, className = "" }) {
           />
         ))}
       </div>
-      <Keyboard onKey = {handleKey}/>
+      <Keyboard onKey = {handleKey} keyResults={keyResults}/>
       <p>{gameOver() ? content : ""}</p>
     </>
   );
