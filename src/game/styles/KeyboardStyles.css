@@ -4,19 +4,22 @@
   flex-direction: column;
   align-items: center;
   gap: 4px;
-  margin-top: 15px;
-  width: 100%;
+  margin: 15px auto 0;
+  width: min(90vw, 500px);
 }
 
 .keyboard-row {
   display: flex;
   justify-content: center;
   gap: 4px;
+  width: 100%;
 }
 
 .keyboard button {
-  width: 40px;
-  height: 52px;
+  flex: 1;
+  min-width: 0;
+
+  height: min(9vh, 60px);
 
   border: none;
   border-radius: 4px;
@@ -24,7 +27,7 @@
   background-color: #9a9a9a;
   color: #111;
 
-  font-size: 16px;
+  font-size: min(2.5vw, 16px);
   font-weight: 700;
 
   cursor: pointer;
@@ -32,7 +35,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-
+  
   padding: 0;
   user-select: none;
 
@@ -48,7 +51,7 @@
 }
 
 .keyboard button.special {
-  width: 65px;
+  flex: 1.5;
 }
 
 .keyboard button.green {
@@ -67,4 +70,31 @@
   background-color: #3b3b3b;
   color: #fffafa;
   border: 2px solid #3b3b3b;
+}
+
+@media (max-width: 500px) {
+    .keyboard {
+        width: 90vw;
+        gap: 3px;
+    }
+
+    .keyboard-row {
+        gap: 3px;
+    }
+
+    .keyboard button {
+        height: 56px;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 350px) {
+    .keyboard button {
+        height: 44px;
+        font-size: 11px;
+    }
+
+    .keyboard-row {
+        gap: 2px;
+    }
 }

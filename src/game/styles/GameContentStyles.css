@@ -1,14 +1,23 @@
 .square {
-    width: 1.5em;
-    height: 1.5em;
+    width: min(14vw, 9vh, 70px);
+    aspect-ratio: 1;
+
     margin: 0.1em;
-    font-size: 1.5em;
+
+    font-size: min(6vw, 6vh, 24px);
     font-weight: bold;
+
     text-transform: uppercase;
     text-align: center;
-    line-height: 1.5em;
-    text-shadow: 0 0 1px #000;
+    line-height: 1;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    box-sizing: border-box;
 }
+
 .row {
     display: flex;
     justify-content: center;
@@ -20,15 +29,10 @@
 
 @keyframes shake {
   0% { transform: translateX(0); }
-
   20% { transform: translateX(-8px); }
-
   40% { transform: translateX(8px); }
-
   60% { transform: translateX(-8px); }
-
   80% { transform: translateX(8px); }
-
   100% { transform: translateX(0); }
 }
 
@@ -46,16 +50,6 @@
     background-color: #3b3b3b;
     color: #fffafa;
     border: 2px solid #3b3b3b;
-}
-
-[data-theme="dark"] .empty {
-  --game-color: #fbfafd;
-  --game-border: #3b3b3b;
-}
-
-[data-theme="light"] .empty {
-  --game-color: #252526;
-  --game-border: #a0a0a0;
 }
 
 .empty {

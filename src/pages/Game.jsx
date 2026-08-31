@@ -8,11 +8,11 @@ function Game() {
   }
   let randomWord = chooseRandomWord();
   return (
-    <>
-    <div className='game-background' />
-    <div className='wordle-title'>WORDLE</div>
-    <Wordle content={randomWord} />
-    </>
+    <div className='game'>
+      <div className='game-background' />
+      <div className='wordle-title'>WORDLE</div>
+      <Wordle content={randomWord} className='game-content'/>
+    </div>
   );
 }
 
