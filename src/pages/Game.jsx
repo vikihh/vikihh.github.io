@@ -1,6 +1,6 @@
 import '../game/styles/WordleStyles.css'
 import Wordle from '../game/components/Wordle.jsx';
-import {possibleAnswersWords, allowedWords, bulgarianWords} from '../game/assets/words.js';
+import {possibleAnswersWords, allowedWords, bulgarianWords, bulgarianPossibleAnswersWords } from '../game/assets/words.js';
 function Game({language}) {
   function chooseRandomWord(language) {
     if (language === 'English') {
@@ -8,8 +8,8 @@ function Game({language}) {
       return possibleAnswersWords[randomIndex];
     }
     else {
-      var randomIndex = Math.floor(Math.random() * bulgarianWords.length);
-      return bulgarianWords[randomIndex];
+      var randomIndex = Math.floor(Math.random() * bulgarianPossibleAnswersWords.length);
+      return bulgarianPossibleAnswersWords[randomIndex];
     }
   }
   let randomWord = chooseRandomWord(language);

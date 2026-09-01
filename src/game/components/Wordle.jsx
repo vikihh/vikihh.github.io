@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { useEffect } from 'react';
 import '../styles/GameContentStyles.css';
-import {allowedWords, possibleAnswersWords, bulgarianWords} from '../assets/words.js';
+import {allowedWords, possibleAnswersWords, bulgarianWords, bulgarianPossibleAnswersWords} from '../assets/words.js';
 import {englishKeyboard, bulgarianKeyboard} from '../assets/keyboard.js'
 import Row from "./Row.jsx";
 import Keyboard from '../components/Keyboard.jsx';
