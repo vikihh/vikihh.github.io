@@ -10,7 +10,8 @@ function App() {
       <div className="page-container">
         <Routes>
           <Route path="/" element={<Home/>}/>
-          <Route path="/wordle" element={<Game/>}/>
+          <Route path="/wordle" element={<Game language={'English'}/>}/>
+          <Route path="/wordle-bg" element={<Game language={'Bulgarian'}/>}/>
         </Routes>
       </div>
     </Router>

@@ -1,9 +1,8 @@
-import keyboardRows from '../assets/keyboard.js';
 import '../styles/KeyboardStyles.css';
-function Keyboard({onKey, keyResults}) {
+function Keyboard({onKey, keyResults, layout}) {
   return (
     <div className='keyboard'>
-      {keyboardRows.map((row, rowIndex) => (
+      {layout.map((row, rowIndex) => (
         <div className='keyboard-row'>
           {
             row.map(key => 

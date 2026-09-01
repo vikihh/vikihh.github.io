@@ -1,11 +1,12 @@
 import { useState } from 'react';
 import { useEffect } from 'react';
 import '../styles/GameContentStyles.css';
-import {allowedWords, possibleAnswersWords} from '../assets/words.js';
+import {allowedWords, possibleAnswersWords, bulgarianWords} from '../assets/words.js';
+import {englishKeyboard, bulgarianKeyboard} from '../assets/keyboard.js'
 import Row from "./Row.jsx";
 import Keyboard from '../components/Keyboard.jsx';
 
-function Wordle({ content, className = "" }) {
+function Wordle({ content, language }) {
   const [currentInput, setInput] = useState("");
   const [result, setResult] = useState(['E', 'E', 'E', 'E', 'E']);
   const [tries, setTries] = useState(0);
@@ -19,16 +20,14 @@ function Wordle({ content, className = "" }) {
     }))
   );
   function checkValidLetter(letter) {
-    return /^[a-zA-Z]$/.test(letter);
+    if (language === 'English') return /^[a-zA-Z]$/.test(letter);
+    return /^[\p{Script=Cyrillic}]$/u.test(letter);
   }
   function checkValidWord(word) {
     if (word.length !== 5) {
       return false;
     }
-    else if (!/^[a-zA-Z]+$/.test(word)) {
-        return false;
-    }
-    if (!allowedWords.includes(word.toUpperCase())) {
+    if (!allowedWords.includes(word.toUpperCase()) && !bulgarianWords.includes(word.toUpperCase())) {
       return false;
     }
     return true;
@@ -149,7 +148,7 @@ function Wordle({ content, className = "" }) {
           />
         ))}
       </div>
-      <Keyboard onKey = {handleKey} keyResults={keyResults}/>
+      <Keyboard onKey = {handleKey} keyResults={keyResults} layout={(language === 'English'? englishKeyboard: bulgarianKeyboard)}/>
       <p>{gameOver() ? content : ""}</p>
     </>
   );
