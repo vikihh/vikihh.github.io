@@ -12,10 +12,10 @@ function GamesPage() {
       <div className='wordle-title'>GAMES</div>
       <div className='horizontal-container'>
         <a href="#/games/wordle">
-            <Box content= {<img src={wordle} alt="Photo" width={150} height={200}/>}> </Box>
+            <Box content= {<img src={wordle} alt="Photo" />} className='button'> </Box>
         </a>
         <a href="#/games/wordle-bg">
-            <Box content= {<img src={wordlebg} alt="Photo" width={150} height={200}/>}> </Box>
+            <Box content= {<img src={wordlebg} alt="Photo" />}className='button'> </Box>
         </a>
       </div>
     </div>
