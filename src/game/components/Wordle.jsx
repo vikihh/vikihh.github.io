@@ -6,7 +6,7 @@ import {englishKeyboard, bulgarianKeyboard} from '../assets/keyboard.js'
 import Row from "./Row.jsx";
 import Keyboard from '../components/Keyboard.jsx';
 
-function Wordle({ content, language }) {
+function Wordle({ content, language, onPlayAgain }) {
   const [currentInput, setInput] = useState("");
   const [result, setResult] = useState(['E', 'E', 'E', 'E', 'E']);
   const [tries, setTries] = useState(0);
@@ -19,6 +19,20 @@ function Wordle({ content, language }) {
       shake: false
     }))
   );
+  function resetGame() {
+    setInput("");
+    setResult(['E', 'E', 'E', 'E', 'E']);
+    setTries(0);
+    setKeyResults({});
+
+    setRows(
+        Array(6).fill(null).map(() => ({
+            values: Array(5).fill(''),
+            result: Array(5).fill('E'),
+            shake: false
+        }))
+    );
+}
   function checkValidLetter(letter) {
     if (language === 'English') return /^[a-zA-Z]$/.test(letter);
     return /^[\p{Script=Cyrillic}]$/u.test(letter);
@@ -128,7 +142,13 @@ function Wordle({ content, language }) {
     }
   }
   useEffect(() => {
+  resetGame();
+  }, [content, language]);
+  useEffect(() => {
     function handleKeyDown(event) {
+      if (event.key === "Enter") {
+        event.preventDefault();
+      }
       handleKey(event.key.toUpperCase());
     }
     window.addEventListener("keydown", handleKeyDown);
@@ -136,6 +156,7 @@ function Wordle({ content, language }) {
         window.removeEventListener("keydown", handleKeyDown);
     };
   }, [currentInput, tries, rows, result]);
+
   return (
     <>
       <div className="wordle">
@@ -150,6 +171,10 @@ function Wordle({ content, language }) {
       </div>
       <Keyboard onKey = {handleKey} keyResults={keyResults} layout={(language === 'English'? englishKeyboard: bulgarianKeyboard)}/>
       <p>{gameOver() ? content : ""}</p>
+      <button onClick={onPlayAgain}>
+        New Game
+      </button>
+
     </>
   );
 }
