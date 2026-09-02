@@ -170,11 +170,17 @@ function Wordle({ content, language, onPlayAgain }) {
         ))}
       </div>
       <Keyboard onKey = {handleKey} keyResults={keyResults} layout={(language === 'English'? englishKeyboard: bulgarianKeyboard)}/>
-      <p>{gameOver() ? content : ""}</p>
-      <button onClick={onPlayAgain}>
-        New Game
-      </button>
-
+      <p>
+        {gameOver() && (
+        <>
+          <div>{content}</div>
+          <button onClick={onPlayAgain} className='new-game-button'>
+            {language === 'English' ? 'New Game': 'Нова Игра'}
+          </button>
+        </>
+        )}
+      </p>
+      
     </>
   );
 }

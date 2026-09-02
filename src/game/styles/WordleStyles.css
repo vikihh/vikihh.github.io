@@ -62,3 +62,26 @@
   --game-color: #252526;
   --game-border: #a0a0a0;
 }
+
+.new-game-button {
+
+  height: min(6vh, 36px);
+
+  background-color: transparent;
+  background-color: #1b8539;
+  color: #fffafa;
+  border: 2px solid #1b8539;
+  border-radius: 4px;
+
+  font-size: min(2.5vw, 16px);
+  font-weight: 700;
+
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-transform: uppercase;
+  transition: transform 0.05s, background-color 0.15s;
+  margin-top: 10px;
+}
