@@ -1,9 +1,15 @@
 import '../styles/WordleStyles.css'
 
-function GameCard({ content }) {
+function GameCard({ name, content }) {
   return (
     <div className={`game-card`}>
-      {content}
+      <div className="game-card-name">
+        {name}
+      </div>
+
+      <div className="game-card-content">
+        {content}
+      </div>
     </div>
   );
 }

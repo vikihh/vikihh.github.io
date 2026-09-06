@@ -12,10 +12,10 @@ function GamesPage() {
       <div className='wordle-title'>GAMES</div>
       <div className='horizontal-container'>
         <a href="#/games/wordle">
-            <GameCard content= {<img src={wordle} alt="Photo" />} > </GameCard>
+            <GameCard name = {"Wordle"} content= {<img src={wordle} alt="Wordle" />} />
         </a>
         <a href="#/games/wordle-bg">
-            <GameCard content= {<img src={wordlebg} alt="Photo" />} > </GameCard>
+            <GameCard name = {"BG Wordle"} content= {<img src={wordlebg} alt="BG Wordle" />} />
         </a>
       </div>
     </div>
