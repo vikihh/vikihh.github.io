@@ -5,11 +5,15 @@ import '../styles/Toolbar.css'
 import { FaDice } from "react-icons/fa";
 import { FaBars } from "react-icons/fa";
 import { useState, useEffect } from 'react';
+const isSmallScreen = window.innerWidth <= 768;
 
 function Toolbar() {
-  const [expanded, setExpanded] = useState(true);
+  const [expanded, setExpanded] = useState(!isSmallScreen);
   useEffect(() => {
     const handleScroll = () => {
+      if (isSmallScreen) {
+      return;
+    }
       if (window.scrollY > 0) {
         setExpanded(false);
       } else {
