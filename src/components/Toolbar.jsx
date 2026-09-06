@@ -3,6 +3,7 @@ import '../App.css'
 import Social from '../components/Social.jsx'
 import '../styles/Toolbar.css'
 import { FaDice } from "react-icons/fa";
+import { FaBars } from "react-icons/fa";
 import { useState } from 'react';
 
 function Toolbar() {
@@ -13,7 +14,7 @@ function Toolbar() {
         className="toolbar-toggle"
         onClick={() => setExpanded(!expanded)}
       >
-        ☰
+        <FaBars size={"1em"}/>
       </button>
       {expanded && (
         <div className="toolbar-content">

@@ -1,9 +1,31 @@
 .toolbar {
   position: fixed;
   right: 1em;
+  width: 3em;
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
   margin: 1em auto;
   z-index: 1000;
+}
+
+.toolbar .toolbar-toggle {
+  all: unset;
+  width: 2em;
+  height: 2em;
+  align-self: center;
+  justify-self: center;
+  transition: transform 0.2s ease, filter 0.2s ease;
+  filter: drop-shadow(0 3px 6px rgba(0,0,0,0.25));
+}
+
+.toolbar-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.toolbar.folded .toolbar-content {
+  display: none;
 }
