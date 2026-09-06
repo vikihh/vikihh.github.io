@@ -1,8 +1,8 @@
 import '../App.css'
 import '../game/styles/WordleStyles.css'
-import Box from '../components/Box.jsx'
 import wordle from'../game/assets/wordle.png'
 import wordlebg from'../game/assets/wordle-bg.png'
+import GameCard from '../game/components/GameCard.jsx'
 
 function GamesPage() {
   return (
@@ -12,10 +12,10 @@ function GamesPage() {
       <div className='wordle-title'>GAMES</div>
       <div className='horizontal-container'>
         <a href="#/games/wordle">
-            <Box content= {<img src={wordle} alt="Photo" />} className='button'> </Box>
+            <GameCard content= {<img src={wordle} alt="Photo" />} > </GameCard>
         </a>
         <a href="#/games/wordle-bg">
-            <Box content= {<img src={wordlebg} alt="Photo" />}className='button'> </Box>
+            <GameCard content= {<img src={wordlebg} alt="Photo" />} > </GameCard>
         </a>
       </div>
     </div>
