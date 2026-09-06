@@ -10,7 +10,7 @@ function GamesPage() {
       <div className='game-background' />
       <div className='vertical-container'>
       <div className='wordle-title'>GAMES</div>
-      <div className='horizontal-container'>
+      <div className='games'>
         <a href="#/games/wordle">
             <GameCard name = {"Wordle"} content= {<img src={wordle} alt="Wordle" />} />
         </a>
