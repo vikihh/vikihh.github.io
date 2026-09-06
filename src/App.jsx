@@ -3,10 +3,12 @@ import Home from './pages/Home';
 import Game from './pages/Game';
 import GamesPage from './pages/GamesPage';
 import Toolbar from './components/Toolbar';
+import HomeButton from './components/HomeButton';
 
 function App() {
   return (
     <Router>
+      <HomeButton/>
       <Toolbar/>
       <div className="page-container">
         <Routes>
