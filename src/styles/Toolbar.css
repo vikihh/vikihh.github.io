@@ -4,6 +4,7 @@
   width: 3em;
   display: flex;
   flex-direction: column;
+  align-items: center;
   gap: 0.5rem;
   margin: 1em auto;
   z-index: 1000;
@@ -24,8 +25,17 @@
   flex-direction: column;
   align-items: center;
   gap: 10px;
+
+  opacity: 1;
+  transform: translateY(0);
+
+  transition:
+    opacity 0.25s ease,
+    transform 0.25s ease;
 }
 
 .toolbar.folded .toolbar-content {
-  display: none;
+  opacity: 0;
+  transform: translateY(-10px);
+  pointer-events: none;
 }

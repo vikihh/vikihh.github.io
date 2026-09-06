@@ -16,19 +16,18 @@ function Toolbar() {
       >
         <FaBars size={"1em"}/>
       </button>
-      {expanded && (
-        <div className="toolbar-content">
-          <Theme />
-          <Social logo={'github'} />
-          <Social logo={'linkedin'} />
-          <div className={"box social-button"}>
-          {
-            <a href="#/games">
-            <FaDice size={"2em"}/>
-            </a>
-          }
-          </div>
-        </div>)}
+      <div className="toolbar-content">
+        <Theme />
+        <Social logo={'github'} />
+        <Social logo={'linkedin'} />
+        <div className={"box social-button"}>
+        {
+          <a href="#/games">
+          <FaDice size={"2em"}/>
+          </a>
+        }
+        </div>
+      </div>
     </div>
   );
 }
